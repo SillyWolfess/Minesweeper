@@ -58,6 +58,9 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
         LIA_trace("Creating objects");
         int offsetY = 100;
         int offsetX = 100;
+        nMines = 0;
+        nUncovered = 0;
+        nFields = 0;
         _fields.clear();
         float scale = 10;
         for (int y = 0; y < ySize; y++) {
@@ -76,6 +79,7 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
                 field.y = (y * 1.0f) * scale + (y * scale * 1.5f) + offsetY;
                 field.scale = scale;
                 _fields.push_back(field);
+                nFields++;
             }
         }
         int ii = 0;
@@ -94,6 +98,7 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
         plantMine(7, 6);
         plantMine(7, 7);
         plantMine(8, 3);
+        LIA_debug_f("Planted {} mines on {} fields", nMines, nFields);
         for (Field& field : _fields) {
             int fieldId = objectManager->getByName(-1, field.id);
             if (fieldId == -1) {
@@ -156,6 +161,10 @@ bool MINE_SWEEPER::Minesweeper::onTick(LIA::Event& event) {
                             }
                             else {
                                 uncoverAround(field, field.id);
+                                LIA_debug_f("Uncovered {} / {} with {} mines", nUncovered, _fields.size(), nMines);
+                                if (_fields.size() == nUncovered + nMines) {
+                                    markAllMines();
+                                }
                             }
                         }
                     } else if (mouseRClicked && field.hidden) {
@@ -213,7 +222,11 @@ void MINE_SWEEPER::Minesweeper::plantMine(int mx, int my) {
         return;
     }
     Field& field = _fields.at(id);
+    if (field.mine) {
+        return;
+    }
     field.mine = true;
+    nMines++;
     for (int y = field.iY - 1; y < field.iY + 2; y++) {
         for (int x = field.iX - 1; x < field.iX + 2; x++) {
             if (x < 0 || y < 0) {
@@ -232,6 +245,26 @@ void MINE_SWEEPER::Minesweeper::plantMine(int mx, int my) {
             Field& f = _fields.at(nId);
             f.minesNear = f.minesNear + 1;
             LIA_trace_f("Mine counter {} [{} x {}] = {} from {} x {}", nId, x, y, f.minesNear, mx, my);
+        }
+    }
+}
+
+void MINE_SWEEPER::Minesweeper::markAllMines() {
+    for (int y = 0; y < ySize; y++) {
+        for (int x = 0; x < xSize; x++) {
+            int id = computeId(x, y);
+            if (id < 0 || id > _fields.size() - 1) {
+                continue;
+            }
+            Field& field = _fields.at(id);
+            if (!field.hidden || !field.mine) {
+                continue;
+            }
+            std::string oldId = field.id;
+            field.objectId = "field_flag";
+            field.id = std::vformat("field_fw[{}_{}]", std::make_format_args(field.iX, field.iY));
+            field.flag = true;
+            switchFields(field, oldId);
         }
     }
 }
@@ -267,6 +300,7 @@ void MINE_SWEEPER::Minesweeper::uncoverAround(Field& field, std::string oldId) {
     }
     LIA_trace_f("Uncover around {}", field.id);
     field.hidden = false;
+    nUncovered++;
     if (field.minesNear > 0) {
         field.objectId = "field_x";
         switch (field.minesNear) {

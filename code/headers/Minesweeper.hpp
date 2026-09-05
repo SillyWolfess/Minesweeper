@@ -13,6 +13,9 @@ namespace MINE_SWEEPER {
         private:
             int xSize = 9;
             int ySize = 9;
+            int nMines = 0;
+            int nUncovered = 0;
+            int nFields = 0;
             struct Field {
                 float x;
                 float y;
@@ -31,6 +34,7 @@ namespace MINE_SWEEPER {
             int computeId(int, int);
             void plantMine(int, int);
             void uncoverAll();
+            void markAllMines();
             void uncoverAround(Field&, std::string);
             void switchFields(Field, std::string);
     };
