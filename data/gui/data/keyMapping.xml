@@ -1,0 +1,13 @@
+<root>
+    <name>Key mapping</name>
+    <id>keyMapping</id>
+    <position x = "200" y = "0" z = "-1"/>
+    <scale x = "100" y = "20"/>
+    <buttonScale x = "150" y = "20" />
+    <header visible="true" size="20"/>
+    <children>
+      <list id="list" name="list" type="list"/>  
+      <button action="close_window" arg0="keyMapping" type="button" id="close" name = "Close" x = "0" y = "0"/>
+    </children>
+    <visible>false</visible>
+</root>

@@ -1,0 +1,5 @@
+<root>
+    <vertex>./data/graphics/shaders/simple.vert</vertex>
+    <fragment>./data/graphics/shaders/simple_material.frag</fragment>
+    <geom/>
+</root>

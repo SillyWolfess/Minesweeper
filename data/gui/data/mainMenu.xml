@@ -1,0 +1,16 @@
+<root>
+    <name>Menu</name>
+    <id>main_menu</id>
+    <position x = "0" y = "0" z = "-1"/>
+    <scale x = "150" y = "60"/>
+    <buttonScale x = "150" y = "20" />
+    <header visible="true" size="20"/>
+    <children>
+        <button0 type="button" tooltip="start new game" action="start_simulation" arg0="" id="new" name="New"/>
+        <button2 type="button" action="toggle_window" arg0="settings" id="settings" name = "Settings"/>
+        <button3 type="button" action="toggle_window" arg0="debug" id="debug" name = "Debug info"/>
+        <button4 type="button" action="toggle_window" arg0="keyMapping" id="keyMapping" name = "Key mapping"/>
+        <button5 type="button" action="exit" id="exit" name = "Exit"/>
+    </children>
+    <visible>true</visible>
+</root>

@@ -1,0 +1,4 @@
+<root>
+    <field_empty>./data/minesweeper/models/field_empty.xml</field_empty>
+	<field_texture>./data/minesweeper/models/field_texture.xml</field_texture>
+</root>

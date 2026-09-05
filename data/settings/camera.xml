@@ -1,0 +1,7 @@
+<root>
+    <locked>true</locked>
+    <ortho>true</ortho>
+    <step>0.2</step>
+	<position x="0" y="0" z="-5"/>
+    <controls>./data/settings/controls/camera.xml</controls>
+</root>

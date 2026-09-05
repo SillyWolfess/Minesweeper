@@ -1,0 +1,13 @@
+<root>
+	<name>Tooltip</name>
+	<id>tooltip</id>
+	<allwaysOnTop>true</allwaysOnTop>
+	<position x = "0" y = "0" z = "-1"/>
+	<scale x = "150" y = "60"/>
+	<buttonScale x = "150" y = "20" />
+	<header visible="false" size="20"/>
+	<children>
+		<tooltip type="field" id="tooltip" label="" name ="tooltip" x = "0" y = "60"/>
+	</children>
+	<visible>false</visible>
+</root>

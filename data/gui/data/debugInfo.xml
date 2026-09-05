@@ -1,0 +1,21 @@
+<root>
+    <name>Debug info</name>
+    <id>debug</id>
+    <position x = "300" y = "0" z = "-1"/>
+	<align>right</align>
+    <scale x = "250" y = "20"/>
+    <buttonScale x = "250" y = "20" />
+    <header visible="false" size="20" />
+    <children>
+        <fps type="field" id="fps" label="FPS" placeholder = "fps" x = "0" y = "0"/>
+        <lastKey type="field" id="last_key_code" label="last ascii" placeholder=""/>
+        <lastKey type="field" id="last_key" label="last Key" placeholder=""/>
+        <cameraLabel type="label" id="cameraLabel" value="Camera"/>
+        <camera type="field" id="camera_position" label="pos"/>
+        <lookAt type="field" id="camera_lookAt" label="eye"/>
+		<engineUpdate type="field" id="engineUpdate" label="update"/>
+		<engineDraw type="field" id="engineDraw" label="draw"/>
+        <close action="close_window" arg0="debug" type="button" id="close" name = "Close" x = "0" y = "20"/>
+    </children>
+    <visible>false</visible>
+</root>

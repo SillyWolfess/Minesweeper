@@ -1,0 +1,6 @@
+<root>
+    <name>field_empty</name>
+    <folder>./data/minesweeper/graphics/</folder>
+    <path>./data/minesweeper/graphics/field_empty.obj</path>
+    <shader>simple_material</shader>
+</root>

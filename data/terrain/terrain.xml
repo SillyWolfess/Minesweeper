@@ -1,0 +1,9 @@
+<root>
+    <size x="32" y="100"/>
+    <scale>1</scale>
+    <roughness>1</roughness>
+    <maxHeight>10</maxHeight>
+    <maxDepth>0</maxDepth>
+    <wireMode>false</wireMode>
+    <drawAsPoints>false</drawAsPoints>
+</root>

@@ -1,0 +1,9 @@
+<root>
+    <font>./data/settings/shaders/font.xml</font>
+    <simple>./data/settings/shaders/simple.xml</simple>
+    <gui>./data/settings/shaders/gui.xml</gui>
+	<sprite>./data/settings/shaders/sprite.xml</sprite>
+    <advanced>./data/settings/shaders/advanced.xml</advanced>
+    <terrain>./data/settings/shaders/terrain.xml</terrain>
+    <simple_material>./data/settings/shaders/simple_material.xml</simple_material>
+</root>

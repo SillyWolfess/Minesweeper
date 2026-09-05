@@ -1,0 +1,17 @@
+<root>
+    <name>Top bar</name>
+    <id>top_bar</id>
+    <position x = "0" y = "0" z = "-1"/>
+    <scale x = "100" y = "20"/>
+    <buttonScale x = "100" y = "20" />
+    <header visible="false" size="20"/>
+    <children>
+        <button0 type="button" action="open_ingame_menu" arg0="" id="menu" name="Menu"/>
+        <button3 type="button" action="toggle_window" arg0="debug" id="debug" name = "Debug info"/>
+        <!--
+        <button3 type="button" action="open_window" arg0="inspector" id="inspector" name = "Inspector"/>
+        <button type="button" action="open_window" arg0="bottom_bar" id="bottom_bar" name="bottom Bar"/>
+        -->
+    </children>
+    <visible>false</visible>
+</root>

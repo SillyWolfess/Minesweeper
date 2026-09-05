@@ -1,0 +1,19 @@
+<root>
+    <name>Menu</name>
+    <id>ingame_menu</id>
+    <position x = "0" y = "0" z = "-1"/>
+    <scale x = "150" y = "60"/>
+    <buttonScale x = "150" y = "20" />
+    <header visible="true" size="20"/>
+    <children>
+        <button0 type="button" action="continue_simulation" arg0="" id="continue" name="Continue" x = "0" y = "0"/>
+        <button2 type="button" action="toggle_window" arg0="settings" id="settings" name = "Settings" x = "0" y = "20"/>
+        <button3 type="button" action="toggle_window" arg0="debug" id="debug" name = "Debug info" x = "0" y = "40"/>
+        <button4 type="button" action="toggle_window" arg0="keyMapping" id="keyMapping" name = "Key mapping"/>
+        <!--
+        <button type="button" action="open_window" arg0="bottom_bar" id="bottom_bar" name="bottom Bar"/>
+        -->
+        <button5 type="button" action="exit" id="exit" name = "Exit" x = "0" y = "60"/>
+    </children>
+    <visible>false</visible>
+</root>

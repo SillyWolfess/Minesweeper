@@ -1,0 +1,12 @@
+*.dll
+*.exe
+*.obj
+*.txt
+*.lib
+.vs
+.vscode
+/code/*.obj
+*.pdb
+*.slnx
+*.vcxproj*
+x64/

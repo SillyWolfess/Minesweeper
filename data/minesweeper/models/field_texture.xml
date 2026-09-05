@@ -1,0 +1,6 @@
+<root>
+	<name>field_texture</name>
+	<folder>./data/minesweeper/graphics/</folder>
+	<path>./data/minesweeper/graphics/field_texture.obj</path>
+	<shader>advanced</shader>
+</root>
