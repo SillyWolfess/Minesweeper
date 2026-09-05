@@ -17,16 +17,16 @@ namespace MINE_SWEEPER {
             int nUncovered = 0;
             int nFields = 0;
             struct Field {
-                float x;
-                float y;
-                float scale;
-                int iX;
-                int iY;
-                int minesNear;
                 bool mine;
                 bool hidden;
                 bool qm;
                 bool flag;
+                int iX;
+                int iY;
+                int minesNear;
+                float x;
+                float y;
+                float scale;
                 std::string objectId;
                 std::string id;
             };
