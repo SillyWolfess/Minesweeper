@@ -58,6 +58,9 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
         LIA_trace("Creating objects");
         int offsetY = 100;
         int offsetX = 100;
+        int dSize = 18;
+        xSize = dSize;
+        ySize = dSize;
         nMines = 0;
         nUncovered = 0;
         nFields = 0;
@@ -335,7 +338,7 @@ void MINE_SWEEPER::Minesweeper::uncoverAround(Field& field, std::string oldId) {
         }
         field.id = std::vformat("field_m[{}_{}]", std::make_format_args(field.iX, field.iY));
     } else {
-        field.objectId = "field";
+        field.objectId = "field_uncovered";
         field.id = std::vformat("field[{}_{}]", std::make_format_args(field.iX, field.iY));
     }
     switchFields(field, oldId);

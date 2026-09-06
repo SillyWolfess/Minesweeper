@@ -1,6 +1,6 @@
 <root>
     <field_empty>./data/minesweeper/objects/field_empty.xml</field_empty>
-	<field>./data/minesweeper/objects/field.xml</field>
+	<field_uncovered>./data/minesweeper/objects/field_uncovered.xml</field_uncovered>
 	<field_lost>./data/minesweeper/objects/field_lost.xml</field_lost>
 	<field_mine>./data/minesweeper/objects/field_mine.xml</field_mine>
 	<field_qm>./data/minesweeper/objects/field_qm.xml</field_qm>
