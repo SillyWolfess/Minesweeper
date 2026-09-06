@@ -120,7 +120,6 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
             oField->_scale.x = scale;
             oField->_scale.y = scale;
         }
-    //    uncoverAll();
     LIA_CATCH(LIA::Engine::getInstance().fatal();)
     return true;
 }
@@ -344,11 +343,11 @@ void MINE_SWEEPER::Minesweeper::uncoverAround(Field& field, std::string oldId) {
         return;
     }
     for (int y = field.iY - 1; y < field.iY + 2; y++) {
-        if (y < 0) {
+        if (y < 0 || y > ySize - 1) {
             continue;
         }
         for (int x = field.iX - 1; x < field.iX + 2; x++) {
-            if (x < 0) {
+            if (x < 0 || x > xSize - 1) {
                 continue;
             }
             if (x == field.iX && y == field.iY) {
