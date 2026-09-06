@@ -163,7 +163,14 @@ bool MINE_SWEEPER::Minesweeper::onTick(LIA::Event& event) {
                                 uncoverAll();
                             }
                             else {
+                                std::string oId = field.id;
+                                LIA::TimeCounter uncoverTime;
+                                uncoverTime.setName(std::vformat("Uncovering around {}", std::make_format_args(oId)));
+                                LIA_trace_f("Uncovering around {} start", oId);
+                                uncoverTime.start();
                                 uncoverAround(field, field.id);
+                                uncoverTime.end();;
+                                LIA_trace_f("Uncovering around {} end {}", oId, uncoverTime.getDelta());
                                 LIA_debug_f("Uncovered {} / {} with {} mines", nUncovered, _fields.size(), nMines);
                                 if (_fields.size() == nUncovered + nMines) {
                                     markAllMines();
