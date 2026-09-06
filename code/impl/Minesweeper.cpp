@@ -120,6 +120,7 @@ bool MINE_SWEEPER::Minesweeper::onLoad(LIA::Event& event) {
             oField->_scale.x = scale;
             oField->_scale.y = scale;
         }
+    //    uncoverAll();
     LIA_CATCH(LIA::Engine::getInstance().fatal();)
     return true;
 }
@@ -382,6 +383,7 @@ void MINE_SWEEPER::Minesweeper::switchFields(Field field, std::string oldId) {
         field2Id = objectManager->getByName(field2Id, field.id);
         LIA::Object* field2 = objectManager->get(field2Id);
         LIA::copy(field2->_position, oField->_position);
+        LIA::copy(field2->_scale, oField->_scale);
 
         std::vector<std::string> toRemove;
         LIA_trace_f("Trying to remove {}", oldId);

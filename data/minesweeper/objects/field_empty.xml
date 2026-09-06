@@ -1,4 +1,5 @@
 <root>
     <name>field_empty</name>
-    <model>field_empty</model>
+	<model>field_texture</model>
+	<materialLib>field_empty</materialLib>
 </root>

@@ -1,8 +1,4 @@
 <root>
     <object>field_8</object>
-	<position x="125" y="100" z="-1"/>
-	<scale x="10" y="10" z="1"/>
-    <rotation x="0" y="0" z="0"/>
     <type>object</type>
-    <physics mass="0.1"/>
 </root>
