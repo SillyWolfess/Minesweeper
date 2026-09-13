@@ -289,7 +289,7 @@ bool MINE_SWEEPER::Minesweeper::onTick(LIA::Event& event) {
                                 field.id = std::vformat("field_l[{}_{}]", std::make_format_args(field.iX, field.iY));
                                 field.hidden = false;
                                 switchFields(field, oldId);
-                                uncoverAll();
+                                uncoverMines();
                             }
                             else {
                                 std::string oId = field.id;
@@ -446,6 +446,28 @@ void MINE_SWEEPER::Minesweeper::uncoverAll() {
             }
             else {
                 uncoverAround(field, field.id);
+            }
+        }
+    }
+}
+
+void MINE_SWEEPER::Minesweeper::uncoverMines() {
+    for (int y = 0; y < ySize; y++) {
+        for (int x = 0; x < xSize; x++) {
+            int id = computeId(x, y);
+            if (id < 0 || id > _fields.size() - 1) {
+                continue;
+            }
+            Field& field = _fields.at(id);
+            if (!field.hidden) {
+                continue;
+            }
+            if (field.mine) {
+                std::string oldId = field.id;
+                field.objectId = "field_mine";
+                field.id = std::vformat("field_l[{}_{}]", std::make_format_args(field.iX, field.iY));
+                field.hidden = false;
+                switchFields(field, oldId);
             }
         }
     }

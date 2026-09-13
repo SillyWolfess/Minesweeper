@@ -42,6 +42,7 @@ namespace MINE_SWEEPER {
             void plantMine(int, int);
             void plantMine(int);
             void uncoverAll();
+            void uncoverMines();
             void markAllMines();
             void uncoverAround(Field&, std::string);
             void switchFields(Field, std::string);
