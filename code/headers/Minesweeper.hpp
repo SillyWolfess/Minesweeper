@@ -10,12 +10,19 @@ namespace MINE_SWEEPER {
             virtual bool registerHandlers();
             virtual bool onLoad(LIA::Event&);
             virtual bool onTick(LIA::Event&);
+            virtual bool onButtonAction(LIA::Event&);
+            virtual bool onOptionChanged(LIA::Event&);
+            virtual bool onGetGuiData(LIA::Event&);
         private:
             int xSize = 9;
             int ySize = 9;
             int nMines = 0;
+            int nFlags = 0;
             int nUncovered = 0;
             int nFields = 0;
+            int _iLevel = 0;
+            float _minScalex = -1;
+            std::string _mineBar;
             struct Field {
                 bool mine;
                 bool hidden;
@@ -33,10 +40,16 @@ namespace MINE_SWEEPER {
             std::vector<Field> _fields;
             int computeId(int, int);
             void plantMine(int, int);
+            void plantMine(int);
             void uncoverAll();
             void markAllMines();
             void uncoverAround(Field&, std::string);
             void switchFields(Field, std::string);
+            void updateScoreUI();
+            bool prepareLevel();
+            int getSizeByLevel();
+            int getMinesByLevel();
+            void updateData(std::string);
     };
 }
 #endif
