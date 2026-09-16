@@ -1,0 +1,5 @@
+<root>
+    <name>field_uncovered</name>
+    <model>field_texture</model>
+	<materialLib>field_uncovered</materialLib>
+</root>

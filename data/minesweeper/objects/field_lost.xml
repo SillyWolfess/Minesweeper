@@ -1,0 +1,5 @@
+<root>
+    <name>field_lost</name>
+    <model>field_texture</model>
+	<materialLib>field_mine_lost</materialLib>
+</root>

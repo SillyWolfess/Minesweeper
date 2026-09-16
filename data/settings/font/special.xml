@@ -1,0 +1,13 @@
+<root>
+    <plus ascii="43">./data/graphics/Fonts/special/plus.obj</plus>
+    <minus ascii="45">./data/graphics/Fonts/special/minus.obj</minus>
+    <dash ascii="150">./data/graphics/Fonts/special/minus.obj</dash>
+    <period ascii="46">./data/graphics/Fonts/special/DOT.obj</period>
+    <bracketL ascii="40">./data/graphics/Fonts/special/bracketL.obj</bracketL>
+    <bracketR ascii="41">./data/graphics/Fonts/special/bracketR.obj</bracketR>
+    <colon ascii="58">./data/graphics/Fonts/special/doubleDot.obj</colon>
+    <questionMark ascii="63">./data/graphics/Fonts/special/questionMark.obj</questionMark>
+    <slash ascii="47">./data/graphics/Fonts/special/slash.obj</slash>
+    <comma ascii="44">./data/graphics/Fonts/special/comma.obj</comma>
+    <equals ascii="61">./data/graphics/Fonts/special/equals.obj</equals>
+</root>

@@ -1,0 +1,13 @@
+<root>
+    <name>Bottom bar</name>
+    <id>bottom_bar</id>
+    <position x = "0" y = "0" z = "-1"/>
+    <scale x = "100" y = "20"/>
+    <buttonScale x = "20" y = "20" />
+    <header visible="true" size="20"/>
+    <align>bottom</align>
+    <children>
+        <actions type="grid" minRows="1" maxRows="1" minColumns="10" maxColumns="10" id="action" name="action"/>
+    </children>
+    <visible>false</visible>
+</root>

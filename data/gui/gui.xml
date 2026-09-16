@@ -1,0 +1,10 @@
+<root>
+    <mainMenu>./data/gui/data/mainMenu.xml</mainMenu>
+    <ingameMenu>./data//gui/data/ingameMenu.xml</ingameMenu>
+    <endMenu>./data/gui/data/endMenu.xml</endMenu>
+    <topBar>./data/gui/data/topBar.xml</topBar>
+    <settings>./data//gui/data/settings.xml</settings>
+    <debugInfo>./data/gui/data/debugInfo.xml</debugInfo>
+    <keyMapping>./data/gui/data/keyMapping.xml</keyMapping>
+	<tooltip>./data/gui/data/tooltip.xml</tooltip>
+</root>

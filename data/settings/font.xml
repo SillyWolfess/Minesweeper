@@ -1,0 +1,6 @@
+<root>
+    <big folder="./data/graphics/Fonts/big/">./data//settings/font/big.xml</big>
+    <small folder="./data/graphics/Fonts/small/">./data/settings/font/small.xml</small>
+    <special folder="./data/graphics/Fonts/special/">./data/settings/font/special.xml</special>
+    <numbers folder="./data/graphics/Fonts/numbers/">./data/settings/font/numbers.xml</numbers>
+</root>

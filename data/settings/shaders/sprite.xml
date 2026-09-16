@@ -1,0 +1,5 @@
+<root>
+    <vertex>./data/graphics/shaders/sprite.vert</vertex>
+    <fragment>./data/graphics/shaders/sprite.frag</fragment>
+    <geom/>
+</root>

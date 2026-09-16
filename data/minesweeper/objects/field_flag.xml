@@ -1,0 +1,5 @@
+<root>
+    <name>field_flag</name>
+    <model>field_texture</model>
+	<materialLib>field_flag</materialLib>
+</root>

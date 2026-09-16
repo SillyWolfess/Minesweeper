@@ -1,0 +1,5 @@
+<root>
+    <name>field_empty</name>
+	<model>field_texture</model>
+	<materialLib>field_empty</materialLib>
+</root>

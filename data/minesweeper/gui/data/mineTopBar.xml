@@ -1,0 +1,16 @@
+<root>
+	<name>Mine top bar</name>
+	<id>mineTopBar</id>
+	<position x = "0" y = "0" z = "-1"/>
+	<scale x = "150" y = "20"/>
+	<buttonScale x = "100" y = "20" />
+	<header visible="false" size="20"/>
+	<align>top</align>
+	<chAlign>horizontal</chAlign>
+	<children>
+		<nFlags type="field" id="nFlags" label="Flags" placeholder = "0" x = "0" y = "0"/>
+		<level action="level" type="options" id="level" label="level"/>
+		<reset type="button" action="reset" id="reset" name = "Reset"/>
+	</children>
+	<visible>false</visible>
+</root>

@@ -1,0 +1,13 @@
+<root>
+    <name>Game ended</name>
+    <id>end_menu</id>
+    <position x = "0" y = "0" z = "-1"/>
+    <scale x = "150" y = "60"/>
+    <buttonScale x = "150" y = "20" />
+    <header visible="true" size="20"/>
+    <children>
+        <button3 type="button" action="open_main_menu" id="open_main_menu" name = "Back to menu" x = "0" y = "40"/>
+        <button4 type="button" action="exit" id="exit" name = "Exit" x = "0" y = "60"/>
+    </children>
+    <visible>false</visible>
+</root>

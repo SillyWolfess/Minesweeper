@@ -1,0 +1,24 @@
+<root>
+	<header>
+		<color r="0.4" g="0.1" b="0.1" a = "1"/>
+		<hoverColor  r="0.6" g="0.1" b="0.1" a = "1"/>
+		<grabbedColor r="1.0" g="0.1" b="0.1" a = "1"/>
+	</header>
+	<font>
+		<size>14</size>
+		<hoverColor r="0" g="1" b="1" a="1"/>
+	</font>
+	<button>
+		<color r="0.0" g="0.1" b="0.1" a="1"/>
+		<hoverColor r="0.3" g="0.3" b="0.3" a="1"/>
+		<disbaledColor r="0.1" g="0.1" b="0.1" a="1"/>
+	</button>
+	<checkBox>
+		<scale x="20" y="20"/>
+		<color  r="1.0" g="0.0" b="0.0" a="1"/>
+		<checkedColor  r="0.0" g="1.0" b="0.0" a="1"/>
+		<hoverColor  r="1.0" g="1.0" b="0.0" a="1"/>
+	</checkBox>
+	<padding left = "5" right = "5" top = "5" bottom = "5"/>
+	<bgColor r="0.2" g="0.2" b="0.2" a="1"/>
+</root>
